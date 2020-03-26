@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotosFragment"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressbarPhotos"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/progressProductTitlePhotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading Photos..."
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginLeft="140dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/photosError"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="220dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Photos"
+            android:gravity="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

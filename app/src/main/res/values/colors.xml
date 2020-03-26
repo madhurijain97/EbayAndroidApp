@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE82EE</color>
+    <color name="colorPrimaryDark">#EE82EE</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name ="black">#000000</color>
+    <color name = "orange">#FF4500</color>
+    <color name = "white">#ffffff</color>
+    <color name ="red">#ff0000</color>
+    <color name = "purple">#800080</color>
+    <color name = "grey">#C0C0C0</color>
+    <color name = "blue">#6200EE</color>
+    <color name = "tabGrey">#e5e5e5</color>
+    <color name = "darkGrey">#696969</color>
+
+    <color name="staryellow">#FFFF00</color>
+    <color name = "starBlue">#40E0D0</color>
+    <color name ="starTurquoise">#40E0D0</color>
+    <color name = "starPurple">#8A2BE2</color>
+    <color name="starRed">#FF0000</color>
+    <color name="starGreen">#00FF00</color>
+
+    <color name = "purpleActionBar">#6200ee</color>
+
+</resources>

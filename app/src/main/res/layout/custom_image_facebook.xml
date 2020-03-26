@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left"
+            android:tint="@color/white"
+            android:paddingRight="40dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="backButtonClicked"/>
+
+
+        <TextView
+            android:id="@+id/actionBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/imageViewFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/facebook"
+            android:onClick="facebookButtonClicked"
+            android:tint="@color/white"
+            android:layout_marginRight="20dp"
+            />
+
+</RelativeLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchTab">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keyword"
+            android:paddingTop="5dp"
+            android:paddingBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextKeyword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingBottom="8dp"
+            android:hint="Enter Keyword"/>
+
+        <TextView
+            android:id="@+id/textViewKeywordError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter mandatory fields."
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/dropdownCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@array/categoryOptions"
+            android:spinnerMode="dropdown"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Condition"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <CheckBox
+                android:id="@+id/checkboxNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/checkboxUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/checkboxUspecified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unspecified"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipping Options"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <CheckBox
+                android:id="@+id/checkboxLocalPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local Pickup"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/checkboxFreeShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Shipping"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable Nearby Search" />
+
+            <CheckBox
+                android:id="@+id/checkboxNearbySearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="enableNearbySearch"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextMilesFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Miles from"
+            android:visibility="gone"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutcurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/radioCurrentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="radioCurrentClicked"
+                android:checked="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Location"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutZipcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/radioZipCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autocompleteZipcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="Zipcode"
+                android:completionThreshold="1"
+                android:focusable="false"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textViewZipCodeError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter mandatory field"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/buttonSearch"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="searchButtonClicked"
+                android:text="Search"
+                android:background="@color/orange"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="clearButtonClicked"
+                android:text="Clear"
+                android:background="@color/orange"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

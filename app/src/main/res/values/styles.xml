@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#6200EE</item>
+        <!--item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name = "android:actionBarStyle">@style/EbayActionBar</item-->
+    </style>
+
+    <style name="EbayActionBar">
+        <item name = "android:background">#6200EE</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/shopping_splash_new</item>
+    </style>
+
+</resources>

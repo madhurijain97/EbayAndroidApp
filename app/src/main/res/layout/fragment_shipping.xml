@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ShippingFragment">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/ShippingError"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="220dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Shipping Details"
+                android:gravity="center"
+                android:textColor="@color/darkGrey"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+        android:id="@+id/soldByLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/truck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:text="Sold By"
+                    android:paddingLeft="25dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp">
+                <TableLayout
+                    android:id="@+id/soldByTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TableRow
+                        android:id="@+id/storeNameRow"
+                        android:padding="5dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/storeName"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Store Name"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/storeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value"
+                            android:textColor="@color/purple"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/feedbackRow"
+                        android:visibility="gone"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/feedbackScoreName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feedback Score"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/feedbackScoreValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Value" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/popularityRow"
+                        android:visibility="gone"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/shippingInfoName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Popularity"
+                            android:textColor="@color/black"/>
+
+                        <com.wssholmes.stark.circular_score.CircularScoreView
+                            android:id="@+id/score_view"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:score="10"
+                            app:setPrimaryColor="@color/red"
+                            app:setBackgroundColor="@color/white"
+                            app:setTextColor="@color/black"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/feedbackStarRow"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/feedbackStarName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feedback Star"
+                            android:textColor="@color/black"/>
+
+                        <ImageView
+                            android:id="@+id/feedbackStarValue"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:src="@drawable/star_circle" />
+
+                    </TableRow>
+
+
+                </TableLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/shippingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ferry"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Info"
+                    android:paddingLeft="25dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp">
+
+                <TableLayout
+                    android:id="@+id/shippingInfoTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/returnPolicyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dump_truck"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Return Policy"
+                    android:paddingLeft="25dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp">
+                <TableLayout
+                    android:id="@+id/returnPolicyTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </TableLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

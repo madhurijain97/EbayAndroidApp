@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Product Search</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="categoryOptions">
+        <item>All</item>
+        <item>Art</item>
+        <item>Baby</item>
+        <item>Books</item>
+        <item>Clothing, Shoes /&amp; Accessories</item>
+        <item>Computers, Tablets &amp; Networking</item>
+        <item>Health &amp; Beauty</item>
+        <item>Music</item>
+        <item>Video Games &amp; Consoles</item>
+    </string-array>
+
+    <string-array name="sortByParameter">
+        <item>Default</item>
+        <item>Name</item>
+        <item>Price</item>
+        <item>Days</item>
+    </string-array>
+
+    <string-array name="sortByOrder">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+
+    <string name="product">PRODUCT</string>
+    <string name="shipping">SHIPPING</string>
+    <string name="photos">PHOTOS</string>
+    <string name="similar">SIMILAR</string>
+
+
+
+</resources>
